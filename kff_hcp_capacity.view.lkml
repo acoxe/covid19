@@ -19,23 +19,23 @@ view: kff_hcp_capacity {
     sql: ${TABLE}."PROVINCE_STATE" ;;
   }
 
-  dimension: total_hospital_beds {
-    type: number
+  measure: total_hospital_beds {
+    type: sum
     sql: ${TABLE}."TOTAL_HOSPITAL_BEDS" ;;
   }
 
-  dimension: hospital_beds_per_1000_population {
-    type: number
+  measure: hospital_beds_per_1000_population {
+    type: sum
     sql: ${TABLE}."HOSPITAL_BEDS_PER_1000_POPULATION" ;;
   }
 
-  dimension: total_chcs {
-    type: number
+  measure: total_chcs {
+    type: sum
     sql: ${TABLE}."TOTAL_CHCS" ;;
   }
 
-  dimension: chc_service_delivery_sites {
-    type: number
+  measure: chc_service_delivery_sites {
+    type: sum
     sql: ${TABLE}."CHC_SERVICE_DELIVERY_SITES" ;;
   }
 

@@ -24,98 +24,98 @@ view: pcm_dps_covid19_details {
     sql: ${TABLE}."DATE" ;;
   }
 
-  dimension: hospitalized {
-    type: number
+  measure: hospitalized {
+    type: sum
     sql: ${TABLE}."HOSPITALIZED" ;;
   }
 
-  dimension: intensive_care {
-    type: number
+  measure: intensive_care {
+    type: sum
     sql: ${TABLE}."INTENSIVE_CARE" ;;
   }
 
-  dimension: total_hospitalized {
-    type: number
+  measure: total_hospitalized {
+    type: sum
     sql: ${TABLE}."TOTAL_HOSPITALIZED" ;;
   }
 
-  dimension: home_isolation {
-    type: number
+  measure: home_isolation {
+    type: sum
     sql: ${TABLE}."HOME_ISOLATION" ;;
   }
 
-  dimension: total_positive {
-    type: number
+  measure: total_positive {
+    type: sum
     sql: ${TABLE}."TOTAL_POSITIVE" ;;
   }
 
-  dimension: new_positive {
-    type: number
+  measure: new_positive {
+    type: sum
     sql: ${TABLE}."NEW_POSITIVE" ;;
   }
 
-  dimension: discharged_healed {
-    type: number
+  measure: discharged_healed {
+    type: sum
     sql: ${TABLE}."DISCHARGED_HEALED" ;;
   }
 
-  dimension: deceased {
-    type: number
+  measure: deceased {
+    type: sum
     sql: ${TABLE}."DECEASED" ;;
   }
 
-  dimension: total_cases {
-    type: number
+  measure: total_cases {
+    type: sum
     sql: ${TABLE}."TOTAL_CASES" ;;
   }
 
-  dimension: tested {
-    type: number
+  measure: tested {
+    type: sum
     sql: ${TABLE}."TESTED" ;;
   }
 
-  dimension: hospitalized_since_prev_day {
-    type: number
+  measure: hospitalized_since_prev_day {
+    type: sum
     sql: ${TABLE}."HOSPITALIZED_SINCE_PREV_DAY" ;;
   }
 
-  dimension: intensive_care_since_prev_day {
-    type: number
+  measure: intensive_care_since_prev_day {
+    type: sum
     sql: ${TABLE}."INTENSIVE_CARE_SINCE_PREV_DAY" ;;
   }
 
-  dimension: total_hospitalized_since_prev_day {
-    type: number
+  measure: total_hospitalized_since_prev_day {
+    type: sum
     sql: ${TABLE}."TOTAL_HOSPITALIZED_SINCE_PREV_DAY" ;;
   }
 
-  dimension: home_isolation_since_prev_day {
-    type: number
+  measure: home_isolation_since_prev_day {
+    type: sum
     sql: ${TABLE}."HOME_ISOLATION_SINCE_PREV_DAY" ;;
   }
 
-  dimension: total_positive_since_prev_day {
-    type: number
+  measure: total_positive_since_prev_day {
+    type: sum
     sql: ${TABLE}."TOTAL_POSITIVE_SINCE_PREV_DAY" ;;
   }
 
-  dimension: discharged_healed_since_prev_day {
-    type: number
+  measure: discharged_healed_since_prev_day {
+    type: sum
     sql: ${TABLE}."DISCHARGED_HEALED_SINCE_PREV_DAY" ;;
   }
 
-  dimension: deceased_since_prev_day {
-    type: number
+  measure: deceased_since_prev_day {
+    type: sum
     sql: ${TABLE}."DECEASED_SINCE_PREV_DAY" ;;
   }
 
-  dimension: total_cases_since_prev_day {
-    type: number
+  measure: total_cases_since_prev_day {
+    type: sum
     sql: ${TABLE}."TOTAL_CASES_SINCE_PREV_DAY" ;;
   }
 
-  dimension: tested_since_prev_day {
-    type: number
+  measure: tested_since_prev_day {
+    type: sum
     sql: ${TABLE}."TESTED_SINCE_PREV_DAY" ;;
   }
 

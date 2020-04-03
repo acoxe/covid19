@@ -34,13 +34,13 @@ view: kff_us_icu_beds {
     sql: ${TABLE}."STATE" ;;
   }
 
-  dimension: hospitals {
-    type: number
+  measure: hospitals {
+    type: sum
     sql: ${TABLE}."HOSPITALS" ;;
   }
 
-  dimension: icu_beds {
-    type: number
+  measure: icu_beds {
+    type: sum
     sql: ${TABLE}."ICU_BEDS" ;;
   }
 

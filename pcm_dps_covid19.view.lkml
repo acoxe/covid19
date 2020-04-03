@@ -29,8 +29,8 @@ view: pcm_dps_covid19 {
     sql: ${TABLE}."CASE_TYPE" ;;
   }
 
-  dimension: cases {
-    type: number
+  measure: cases {
+    type: sum
     sql: ${TABLE}."CASES" ;;
   }
 
@@ -44,8 +44,8 @@ view: pcm_dps_covid19 {
     sql: ${TABLE}."LAT" ;;
   }
 
-  dimension: difference {
-    type: number
+  measure: difference {
+    type: sum
     sql: ${TABLE}."DIFFERENCE" ;;
   }
 
@@ -62,6 +62,12 @@ view: pcm_dps_covid19 {
   dimension_group: last_updated_date {
     type: time
     sql: ${TABLE}."LAST_UPDATED_DATE" ;;
+  }
+
+  dimension: case_location {
+    type: location
+    sql_latitude: ${lat} ;;
+    sql_longitude: ${long} ;;
   }
 
   set: detail {

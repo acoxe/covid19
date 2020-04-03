@@ -25,23 +25,23 @@ explore: ct_us_covid_tests {}
 
 explore: demographics {}
 
-# explore: hdx_acaps {}
+explore: hdx_acaps {}
 
-# explore: hs_bulk_data {}
+explore: hs_bulk_data {}
 
-# explore: hum_restrictions_airline {}
+explore: hum_restrictions_airline {}
 
-# explore: hum_restrictions_country {}
+explore: hum_restrictions_country {}
 
 explore: jhu_covid_19 {}
 
-# explore: kff_hcp_capacity {}
+explore: kff_hcp_capacity {}
 
-# explore: kff_us_icu_beds {}
+explore: kff_us_icu_beds {}
 
-# explore: kff_us_policy_actions {}
+explore: kff_us_policy_actions {}
 
-# explore: kff_us_state_mitigations {}
+explore: kff_us_state_mitigations {}
 
 # explore: nyt_us_covid19 {}
 

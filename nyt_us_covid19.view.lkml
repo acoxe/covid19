@@ -29,13 +29,13 @@ view: nyt_us_covid19 {
     sql: ${TABLE}."FIPS" ;;
   }
 
-  dimension: cases {
-    type: number
+  measure: cases {
+    type: sum
     sql: ${TABLE}."CASES" ;;
   }
 
-  dimension: deaths {
-    type: number
+  measure: deaths {
+    type: sum
     sql: ${TABLE}."DEATHS" ;;
   }
 
@@ -49,13 +49,13 @@ view: nyt_us_covid19 {
     sql: ${TABLE}."ISO3166_2" ;;
   }
 
-  dimension: cases_since_prev_day {
-    type: number
+  measure: cases_since_prev_day {
+    type: sum
     sql: ${TABLE}."CASES_SINCE_PREV_DAY" ;;
   }
 
-  dimension: deaths_since_prev_day {
-    type: number
+  measure: deaths_since_prev_day {
+    type: sum
     sql: ${TABLE}."DEATHS_SINCE_PREV_DAY" ;;
   }
 

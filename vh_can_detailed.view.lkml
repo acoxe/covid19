@@ -19,18 +19,18 @@ view: vh_can_detailed {
     sql: ${TABLE}."PROVINCE_STATE" ;;
   }
 
-  dimension: cases {
-    type: number
+  measure: cases {
+    type: sum
     sql: ${TABLE}."CASES" ;;
   }
 
-  dimension: deaths {
-    type: number
+  measure: deaths {
+    type: sum
     sql: ${TABLE}."DEATHS" ;;
   }
 
-  dimension: cases_per_million {
-    type: number
+  measure: cases_per_million {
+    type: sum
     sql: ${TABLE}."CASES_PER_MILLION" ;;
   }
 

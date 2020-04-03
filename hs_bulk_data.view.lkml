@@ -34,19 +34,25 @@ view: hs_bulk_data {
     sql: ${TABLE}."OPERATOR" ;;
   }
 
-  dimension: beds {
-    type: number
+  measure: beds {
+    type: sum
     sql: ${TABLE}."BEDS" ;;
   }
 
-  dimension: staff_medical {
-    type: number
+  measure: staff_medical {
+    type: sum
     sql: ${TABLE}."STAFF_MEDICAL" ;;
   }
 
-  dimension: staff_nursing {
-    type: number
+  measure: staff_nursing {
+    type: sum
     sql: ${TABLE}."STAFF_NURSING" ;;
+  }
+
+  dimension: location {
+    type: location
+    sql_latitude: ${lat} ;;
+    sql_longitude: ${long} ;;
   }
 
   set: detail {

@@ -4,6 +4,11 @@ view: demographics {
       ;;
   }
 
+  measure: count {
+    type: count
+    drill_fields: [detail*]
+  }
+
   dimension: iso3166_1 {
     type: string
     sql: ${TABLE}."ISO3166_1" ;;

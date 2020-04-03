@@ -4,6 +4,11 @@ view: ct_us_covid_tests {
       ;;
   }
 
+  measure: count {
+    type: count
+    drill_fields: [detail*]
+  }
+
   dimension: country_region {
     type: string
     sql: ${TABLE}."COUNTRY_REGION" ;;
@@ -32,11 +37,6 @@ view: ct_us_covid_tests {
   dimension_group: last_updated_date {
     type: time
     sql: ${TABLE}."LAST_UPDATED_DATE" ;;
-  }
-
-  measure: count {
-    type: count
-    drill_fields: [detail*]
   }
 
   measure: positive {

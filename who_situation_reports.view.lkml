@@ -14,23 +14,23 @@ view: who_situation_reports {
     sql: ${TABLE}."COUNTRY" ;;
   }
 
-  dimension: total_cases {
-    type: number
+  measure: total_cases {
+    type: sum
     sql: ${TABLE}."TOTAL_CASES" ;;
   }
 
-  dimension: cases_new {
-    type: number
+  measure: cases_new {
+    type: sum
     sql: ${TABLE}."CASES_NEW" ;;
   }
 
-  dimension: deaths {
-    type: number
+  measure: deaths {
+    type: sum
     sql: ${TABLE}."DEATHS" ;;
   }
 
-  dimension: deaths_new {
-    type: number
+  measure: deaths_new {
+    type: sum
     sql: ${TABLE}."DEATHS_NEW" ;;
   }
 
@@ -39,8 +39,8 @@ view: who_situation_reports {
     sql: ${TABLE}."TRANSMISSION_CLASSIFICATION" ;;
   }
 
-  dimension: days_since_last_reported_case {
-    type: number
+  measure: days_since_last_reported_case {
+    type: sum
     sql: ${TABLE}."DAYS_SINCE_LAST_REPORTED_CASE" ;;
   }
 

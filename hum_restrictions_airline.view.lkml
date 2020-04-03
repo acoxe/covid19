@@ -54,6 +54,12 @@ view: hum_restrictions_airline {
     sql: ${TABLE}."LAST_UPDATE_DATE" ;;
   }
 
+  dimension: location {
+    type: location
+    sql_latitude: ${TABLE}."lat" ;;
+    sql_longitude: ${TABLE}."long" ;;
+  }
+
   set: detail {
     fields: [
       country,
