@@ -1,6 +1,6 @@
 view: jhu_covid_19 {
   derived_table: {
-    sql: SELECT * FROM "PUBLIC"."JHU_COVID_19"
+    sql: SELECT * FROM "PUBLIC"."JHU_COVID_19" LIMIT 10
       ;;
   }
 
@@ -52,6 +52,12 @@ view: jhu_covid_19 {
   dimension: lat {
     type: number
     sql: ${TABLE}."LAT" ;;
+  }
+
+  dimension: store_location {
+    type: location
+    sql_latitude: ${lat} ;;
+    sql_longitude: ${long} ;;
   }
 
   dimension: iso3166_1 {
