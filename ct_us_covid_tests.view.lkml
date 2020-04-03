@@ -19,71 +19,6 @@ view: ct_us_covid_tests {
     sql: ${TABLE}."DATE" ;;
   }
 
-  measure: count {
-    type: count
-    drill_fields: [detail*]
-  }
-
-  measure: positive {
-    type: number
-    sql: ${TABLE}."POSITIVE" ;;
-  }
-
-  measure: positive_since_previous_day {
-    type: number
-    sql: ${TABLE}."POSITIVE_SINCE_PREVIOUS_DAY" ;;
-  }
-
-  measure: negative {
-    type: number
-    sql: ${TABLE}."NEGATIVE" ;;
-  }
-
-  measure: negative_since_previous_day {
-    type: number
-    sql: ${TABLE}."NEGATIVE_SINCE_PREVIOUS_DAY" ;;
-  }
-
-  measure: pending {
-    type: number
-    sql: ${TABLE}."PENDING" ;;
-  }
-
-  measure: pending_since_previous_day {
-    type: number
-    sql: ${TABLE}."PENDING_SINCE_PREVIOUS_DAY" ;;
-  }
-
-  measure: death {
-    type: number
-    sql: ${TABLE}."DEATH" ;;
-  }
-
-  measure: death_since_previous_day {
-    type: number
-    sql: ${TABLE}."DEATH_SINCE_PREVIOUS_DAY" ;;
-  }
-
-  measure: hospitalized {
-    type: number
-    sql: ${TABLE}."HOSPITALIZED" ;;
-  }
-
-  measure: hospitalized_since_previous_day {
-    type: number
-    sql: ${TABLE}."HOSPITALIZED_SINCE_PREVIOUS_DAY" ;;
-  }
-
-  measure: total {
-    type: number
-    sql: ${TABLE}."TOTAL" ;;
-  }
-
-  measure: total_since_previous_day {
-    type: number
-    sql: ${TABLE}."TOTAL_SINCE_PREVIOUS_DAY" ;;
-  }
-
   dimension: iso3166_1 {
     type: string
     sql: ${TABLE}."ISO3166_1" ;;
@@ -97,6 +32,71 @@ view: ct_us_covid_tests {
   dimension_group: last_updated_date {
     type: time
     sql: ${TABLE}."LAST_UPDATED_DATE" ;;
+  }
+
+  measure: count {
+    type: count
+    drill_fields: [detail*]
+  }
+
+  measure: positive {
+    type: sum
+    sql: ${TABLE}."POSITIVE" ;;
+  }
+
+  measure: positive_since_previous_day {
+    type: sum
+    sql: ${TABLE}."POSITIVE_SINCE_PREVIOUS_DAY" ;;
+  }
+
+  measure: negative {
+    type: sum
+    sql: ${TABLE}."NEGATIVE" ;;
+  }
+
+  measure: negative_since_previous_day {
+    type: sum
+    sql: ${TABLE}."NEGATIVE_SINCE_PREVIOUS_DAY" ;;
+  }
+
+  measure: pending {
+    type: sum
+    sql: ${TABLE}."PENDING" ;;
+  }
+
+  measure: pending_since_previous_day {
+    type: sum
+    sql: ${TABLE}."PENDING_SINCE_PREVIOUS_DAY" ;;
+  }
+
+  measure: death {
+    type: sum
+    sql: ${TABLE}."DEATH" ;;
+  }
+
+  measure: death_since_previous_day {
+    type: sum
+    sql: ${TABLE}."DEATH_SINCE_PREVIOUS_DAY" ;;
+  }
+
+  measure: hospitalized {
+    type: sum
+    sql: ${TABLE}."HOSPITALIZED" ;;
+  }
+
+  measure: hospitalized_since_previous_day {
+    type: sum
+    sql: ${TABLE}."HOSPITALIZED_SINCE_PREVIOUS_DAY" ;;
+  }
+
+  measure: total {
+    type: sum
+    sql: ${TABLE}."TOTAL" ;;
+  }
+
+  measure: total_since_previous_day {
+    type: sum
+    sql: ${TABLE}."TOTAL_SINCE_PREVIOUS_DAY" ;;
   }
 
   set: detail {
