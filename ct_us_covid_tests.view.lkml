@@ -4,11 +4,6 @@ view: ct_us_covid_tests {
       ;;
   }
 
-  measure: count {
-    type: count
-    drill_fields: [detail*]
-  }
-
   dimension: country_region {
     type: string
     sql: ${TABLE}."COUNTRY_REGION" ;;
@@ -24,62 +19,67 @@ view: ct_us_covid_tests {
     sql: ${TABLE}."DATE" ;;
   }
 
-  dimension: positive {
+  measure: count {
+    type: count
+    drill_fields: [detail*]
+  }
+
+  measure: positive {
     type: number
     sql: ${TABLE}."POSITIVE" ;;
   }
 
-  dimension: positive_since_previous_day {
+  measure: positive_since_previous_day {
     type: number
     sql: ${TABLE}."POSITIVE_SINCE_PREVIOUS_DAY" ;;
   }
 
-  dimension: negative {
+  measure: negative {
     type: number
     sql: ${TABLE}."NEGATIVE" ;;
   }
 
-  dimension: negative_since_previous_day {
+  measure: negative_since_previous_day {
     type: number
     sql: ${TABLE}."NEGATIVE_SINCE_PREVIOUS_DAY" ;;
   }
 
-  dimension: pending {
+  measure: pending {
     type: number
     sql: ${TABLE}."PENDING" ;;
   }
 
-  dimension: pending_since_previous_day {
+  measure: pending_since_previous_day {
     type: number
     sql: ${TABLE}."PENDING_SINCE_PREVIOUS_DAY" ;;
   }
 
-  dimension: death {
+  measure: death {
     type: number
     sql: ${TABLE}."DEATH" ;;
   }
 
-  dimension: death_since_previous_day {
+  measure: death_since_previous_day {
     type: number
     sql: ${TABLE}."DEATH_SINCE_PREVIOUS_DAY" ;;
   }
 
-  dimension: hospitalized {
+  measure: hospitalized {
     type: number
     sql: ${TABLE}."HOSPITALIZED" ;;
   }
 
-  dimension: hospitalized_since_previous_day {
+  measure: hospitalized_since_previous_day {
     type: number
     sql: ${TABLE}."HOSPITALIZED_SINCE_PREVIOUS_DAY" ;;
   }
 
-  dimension: total {
+  measure: total {
     type: number
     sql: ${TABLE}."TOTAL" ;;
   }
 
-  dimension: total_since_previous_day {
+  measure: total_since_previous_day {
     type: number
     sql: ${TABLE}."TOTAL_SINCE_PREVIOUS_DAY" ;;
   }
