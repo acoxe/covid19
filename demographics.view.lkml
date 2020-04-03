@@ -4,11 +4,6 @@ view: demographics {
       ;;
   }
 
-  measure: count {
-    type: count
-    drill_fields: [detail*]
-  }
-
   dimension: iso3166_1 {
     type: string
     sql: ${TABLE}."ISO3166_1" ;;
@@ -44,18 +39,18 @@ view: demographics {
     sql: ${TABLE}."COUNTY" ;;
   }
 
-  dimension: total_population {
-    type: number
+  measure: total_population {
+    type: sum
     sql: ${TABLE}."TOTAL_POPULATION" ;;
   }
 
-  dimension: total_male_population {
-    type: number
+  measure: total_male_population {
+    type: sum
     sql: ${TABLE}."TOTAL_MALE_POPULATION" ;;
   }
 
-  dimension: total_female_population {
-    type: number
+  measure: total_female_population {
+    type: sum
     sql: ${TABLE}."TOTAL_FEMALE_POPULATION" ;;
   }
 

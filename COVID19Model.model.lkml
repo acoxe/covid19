@@ -23,7 +23,7 @@ include: "*.view"
 
 explore: ct_us_covid_tests {}
 
-# explore: demographics {}
+explore: demographics {}
 
 # explore: hdx_acaps {}
 
