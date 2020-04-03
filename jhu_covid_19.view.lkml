@@ -54,7 +54,7 @@ view: jhu_covid_19 {
     sql: ${TABLE}."LAT" ;;
   }
 
-  dimension: store_location {
+  dimension: case_location {
     type: location
     sql_latitude: ${lat} ;;
     sql_longitude: ${long} ;;
