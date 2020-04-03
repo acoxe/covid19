@@ -1,6 +1,6 @@
 view: jhu_covid_19 {
   derived_table: {
-    sql: SELECT * FROM "PUBLIC"."JHU_COVID_19" LIMIT 10
+    sql: SELECT * FROM "PUBLIC"."JHU_COVID_19"
       ;;
   }
 
