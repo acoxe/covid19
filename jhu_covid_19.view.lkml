@@ -39,8 +39,8 @@ view: jhu_covid_19 {
     sql: ${TABLE}."CASE_TYPE" ;;
   }
 
-  dimension: cases {
-    type: number
+  measure: cases {
+    type: sum
     sql: ${TABLE}."CASES" ;;
   }
 
@@ -64,8 +64,8 @@ view: jhu_covid_19 {
     sql: ${TABLE}."ISO3166_2" ;;
   }
 
-  dimension: difference {
-    type: number
+  measure: difference {
+    type: sum
     sql: ${TABLE}."DIFFERENCE" ;;
   }
 

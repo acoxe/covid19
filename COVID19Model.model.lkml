@@ -33,7 +33,7 @@ explore: ct_us_covid_tests {}
 
 # explore: hum_restrictions_country {}
 
-# explore: jhu_covid_19 {}
+explore: jhu_covid_19 {}
 
 # explore: kff_hcp_capacity {}
 
