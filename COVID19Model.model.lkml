@@ -43,12 +43,12 @@ explore: kff_us_policy_actions {}
 
 explore: kff_us_state_mitigations {}
 
-# explore: nyt_us_covid19 {}
+explore: nyt_us_covid19 {}
 
-# explore: pcm_dps_covid19 {}
+explore: pcm_dps_covid19 {}
 
-# explore: pcm_dps_covid19_details {}
+explore: pcm_dps_covid19_details {}
 
-# explore: vh_can_detailed {}
+explore: vh_can_detailed {}
 
-# explore: who_situation_reports {}
+explore: who_situation_reports {}
