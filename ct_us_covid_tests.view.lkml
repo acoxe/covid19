@@ -48,16 +48,19 @@ view: ct_us_covid_tests {
   measure: positive_since_previous_day {
     type: sum
     sql: ${TABLE}."POSITIVE_SINCE_PREVIOUS_DAY" ;;
+    drill_fields: [detail*]
   }
 
   measure: negative {
     type: sum
     sql: ${TABLE}."NEGATIVE" ;;
+    drill_fields: [detail*]
   }
 
   measure: negative_since_previous_day {
     type: sum
     sql: ${TABLE}."NEGATIVE_SINCE_PREVIOUS_DAY" ;;
+    drill_fields: [detail*]
   }
 
   measure: pending {
@@ -68,36 +71,43 @@ view: ct_us_covid_tests {
   measure: pending_since_previous_day {
     type: sum
     sql: ${TABLE}."PENDING_SINCE_PREVIOUS_DAY" ;;
+    drill_fields: [detail*]
   }
 
   measure: death {
     type: sum
     sql: ${TABLE}."DEATH" ;;
+    drill_fields: [detail*]
   }
 
   measure: death_since_previous_day {
     type: sum
     sql: ${TABLE}."DEATH_SINCE_PREVIOUS_DAY" ;;
+    drill_fields: [detail*]
   }
 
   measure: hospitalized {
     type: sum
     sql: ${TABLE}."HOSPITALIZED" ;;
+    drill_fields: [detail*]
   }
 
   measure: hospitalized_since_previous_day {
     type: sum
     sql: ${TABLE}."HOSPITALIZED_SINCE_PREVIOUS_DAY" ;;
+    drill_fields: [detail*]
   }
 
   measure: total {
     type: sum
     sql: ${TABLE}."TOTAL" ;;
+    drill_fields: [detail*]
   }
 
   measure: total_since_previous_day {
     type: sum
     sql: ${TABLE}."TOTAL_SINCE_PREVIOUS_DAY" ;;
+    drill_fields: [detail*]
   }
 
   set: detail {
