@@ -42,6 +42,7 @@ view: ct_us_covid_tests {
   measure: positive {
     type: sum
     sql: ${TABLE}."POSITIVE" ;;
+    drill_fields: [detail*]
   }
 
   measure: positive_since_previous_day {
