@@ -4,11 +4,6 @@ view: jhu_covid_19 {
       ;;
   }
 
-  measure: count {
-    type: count
-    drill_fields: [detail*]
-  }
-
   dimension: country_region {
     type: string
     sql: ${TABLE}."COUNTRY_REGION" ;;
